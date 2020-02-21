@@ -2,11 +2,12 @@
 @Author: Caleb Vredevoogd (cvredevoogd99@gmail.com)
 A python program that uses CircuitPython and Flick to turn the Raspberry Pi into a gesture-controlled scroll wheel
 """
-#TODO: Resolve compatability issues with python 3 and 2.7 libraries
+
 import flicklib
 import signal
 import time
 import digitalio
+import sys
 from adafruit_hid.mouse import Mouse
 
 mouse = Mouse(usb_hid.devices)
@@ -29,14 +30,9 @@ while True:
     yp = float(xyzlist[1])
     zp = float(xyzlist[2])
 
-    #First, check that finger is within z bounds
-    if zp < .200:
-        if xp < .5:
-            mouse.move(0 , 0, -1)
-        if xp > .5:
-            mouse.move(0, 0, 1)
-        else:
-            mouse.move(0, 0, 0)
-
+    #Output xyzlist to stdout
+    stdout_xyz = sys.stdout
+    for coord in xyzlist:
+        xyzlist.write(coord + " ")
 
 main()
