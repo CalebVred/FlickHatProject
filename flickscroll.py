@@ -1,4 +1,5 @@
 """
+@Author: Caleb Vredevoogd (cvredevoogd99@gmail.com)
 A python program that uses CircuitPython and Flick to turn the Raspberry Pi into a gesture-controlled scroll wheel
 """
 
