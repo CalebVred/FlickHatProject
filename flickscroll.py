@@ -28,9 +28,15 @@ while True:
     xp = float(xyzlist[0])
     yp = float(xyzlist[1])
     zp = float(xyzlist[2])
-    #TODO write code for mouse wheel output
 
-
+    #First, check that finger is within z bounds
+    if zp < .200:
+        if xp < .5:
+            mouse.move(0 , 0, -1)
+        if xp > .5:
+            mouse.move(0, 0, 1)
+        else:
+            mouse.move(0, 0, 0)
 
 
 main()
