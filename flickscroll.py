@@ -2,7 +2,7 @@
 @Author: Caleb Vredevoogd (cvredevoogd99@gmail.com)
 A python program that uses CircuitPython and Flick to turn the Raspberry Pi into a gesture-controlled scroll wheel
 """
-
+#TODO: Resolve compatability issues with python 3 and 2.7 libraries
 import flicklib
 import signal
 import time
