@@ -33,6 +33,6 @@ while True:
     #Output xyzlist to stdout
     stdout_xyz = sys.stdout
     for coord in xyzlist:
-        xyzlist.write(coord + " ")
+        print coord,
 
 main()
